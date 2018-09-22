@@ -59,7 +59,7 @@ else
 fi
 
 ## Set Root Password and reset it
-sed -i -e '/query_cache_size/ d' -e '$ a query_cache_size = 15M' /etc/my.cnf 
+sed -i -e '/max_allowed_packet/ d' -e '$ a max_allowed_packet = 15M' /etc/my.cnf 
 systemctl enable mysqld &>/dev/null
 systemctl set-environment MYSQLD_OPTS="--skip-grant-tables"
 systemctl restart mysqld
