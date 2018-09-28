@@ -15,16 +15,9 @@ CheckSELinux
 CheckFirewall
 
 ## Downloading Java
-DownloadJava 8
 
-## Installing Java
-yum localinstall $JAVAFILE -y &>/dev/null
-if [ $? -eq 0 ]; then 
-	success "JAVA Installed Successfully"
-else
-	error "JAVA Installation Failure!"
-	exit 1
-fi
+
+
 
 ## Downloading MYSQL Repositories and MySQL Server
 yum install https://kojipkgs.fedoraproject.org/packages/python-html2text/2016.9.19/1.el7/noarch/python2-html2text-2016.9.19-1.el7.noarch.rpm -y &>/dev/null
